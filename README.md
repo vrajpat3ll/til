@@ -9,6 +9,7 @@
 <tr>
 <td><a href="#machine-learning">Machine Learning</a><sup>[2]</sup></td>
 <td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
+<td><a href="#python">Python</a><sup>[1]</sup></td>
 </tr>
 
 </tbody>
@@ -27,6 +28,12 @@
 
 <ul>
     <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/master/miscellaneous/ansi-codes.md">ANSI colour codes for colours in terminal</a></li>
+</ul>
+
+### Python
+
+<ul>
+    <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/master/python/important-modules.md">Important modules that should be learnt</a></li>
 </ul>
 
 ## About
