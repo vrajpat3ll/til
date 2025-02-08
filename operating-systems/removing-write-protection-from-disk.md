@@ -2,15 +2,15 @@
 ## Steps
 ### Windows
 
-- Press `Win + R`, then type `diskpart.exe` and press enter.
+- Press `Win + R`, then type `diskpart` and press enter.
 - Enter the following commands.
-```
+```shell
 list disk
 ```
-```
+```shell
 select disk X (replace X with the disk you want) 
 ```
-```
+```shell
 attributes disk clear readonly
 exit
 ```

@@ -2,8 +2,8 @@
 
 [Link](https://www.reddit.com/r/pcmasterrace/comments/10jy1xc/should_i_really_not_defrag_my_ssdsnvmes/) to a thread on this topic!
 
-![](https://github.com/vrajpat3ll/til/blob/master/operating-systems/defrag-SSD-comments.png)
-![](https://github.com/vrajpat3ll/til/blob/master/operating-systems/defrag-informative-comment.png)
+![](https://github.com/vrajpat3ll/til/blob/main/operating-systems/defrag-SSD-comments.png)
+![](https://github.com/vrajpat3ll/til/blob/main/operating-systems/defrag-informative-comment.png)
 
 
 <h5 style="text-align: right;">
