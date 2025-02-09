@@ -7,11 +7,12 @@
 <table align="center">
 <tbody>
 <tr>
+<td><a href="#large-language-models">Large Language Models</a><sup>[1]</sup></td>
 <td><a href="#machine-learning">Machine Learning</a><sup>[2]</sup></td>
 <td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
-<td><a href="#operating-systems">Operating Systems</a><sup>[2]</sup></td>
 </tr>
 <tr>
+<td><a href="#operating-systems">Operating Systems</a><sup>[2]</sup></td>
 <td><a href="#python">Python</a><sup>[1]</sup></td>
 </tr>
 
@@ -19,6 +20,12 @@
 </table>
 
 ---
+
+### Machine Learning
+
+<ul>
+    <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/large-language-models/locally-run-lmm.md">Locally running an LLM</a></li>
+</ul>
 
 ### Machine Learning
 
