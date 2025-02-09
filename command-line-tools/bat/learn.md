@@ -4,7 +4,8 @@ Supports syntax highlighting for a large number of programming and markup langua
 
 > Click on this [link](https://github.com/sharkdp/bat?tab=readme-ov-file#installation) to find out about installation!
 
->[!tip] You can use the `-A/--show-all` option to show and highlight non-printable characters
+> [!tip]
+> You can use the `-A/--show-all` option to show and highlight non-printable characters
 
 ## Usage
 ```bash
