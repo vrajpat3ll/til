@@ -7,12 +7,13 @@
 <table align="center">
 <tbody>
 <tr>
+<td><a href="#computer-networks">Computer Networks</a><sup>[1]</sup></td>
 <td><a href="#large-language-models">Large Language Models</a><sup>[1]</sup></td>
 <td><a href="#machine-learning">Machine Learning</a><sup>[2]</sup></td>
-<td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
 </tr>
 <tr>
-<td><a href="#operating-systems">Operating Systems</a><sup>[2]</sup></td>
+<td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
 <td><a href="#python">Python</a><sup>[1]</sup></td>
 </tr>
 
@@ -21,7 +22,13 @@
 
 ---
 
-### Machine Learning
+### Computer Networks
+
+<ul>
+    <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/computer-networks/sniff-packets-on-the-network.md">Sniff packets on the network</a></li>
+</ul>
+
+### Large Language Models
 
 <ul>
     <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/large-language-models/locally-run-lmm.md">Locally running an LLM</a></li>
@@ -43,6 +50,7 @@
 ### Operating Systems
 
 <ul>
+    <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/operating-systems/dual-booting-linux.md">Installing Pop!_OS alongside Windows 11 Home!</a></li>
     <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/operating-systems/defragging-an-SSD.md">NEVER defrag an SSD!</a></li>
     <li><a target="_blank" href="https://github.com/vrajpat3ll/til/blob/main/operating-systems/removing-write-protection-from-disk.md">Removing write protection from disk or USB</a></li>
 </ul>
