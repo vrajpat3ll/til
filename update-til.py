@@ -50,7 +50,7 @@ def add_categories(base_path: str):
 
             # link to Topic in README
             cell_data = HTMLElement.href(
-                topic_link) + sanitize_topic(topic_link) + HTMLElement.href_end
+                '#'+topic_link) + sanitize_topic(topic_link) + HTMLElement.href_end
             cell_data += HTMLElement.superscript(count_articles(topic_link))
 
             categories += cell_data
@@ -85,7 +85,7 @@ def add_tils(dirs: list[str]):
     # Add all tils with hyperlink to each article
     tils = {
         "content": "",
-        "metadata": {} # ? not yet sure of what to keep! file-name with last modified date?
+        "metadata": {}  # ? not yet sure of what to keep! file-name with last modified date?
 
     }
     for dir in dirs:

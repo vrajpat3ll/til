@@ -6,14 +6,14 @@
 
 <table align=center><tbody>
 <tr>
-<td><a href='artificial-intelligence'>Artificial Intelligence</a><sup>4</sup>
-</td><td><a href='command-line-tools'>Command Line Tools</a><sup>8</sup>
-</td><td><a href='computer-networks'>Computer Networks</a><sup>1</sup>
+<td><a href='#artificial-intelligence'>Artificial Intelligence</a><sup>4</sup>
+</td><td><a href='#command-line-tools'>Command Line Tools</a><sup>8</sup>
+</td><td><a href='#computer-networks'>Computer Networks</a><sup>1</sup>
 </td></tr>
 <tr>
-<td><a href='miscellaneous'>Miscellaneous</a><sup>1</sup>
-</td><td><a href='operating-systems'>Operating Systems</a><sup>3</sup>
-</td><td><a href='python'>Python</a><sup>1</sup>
+<td><a href='#miscellaneous'>Miscellaneous</a><sup>1</sup>
+</td><td><a href='#operating-systems'>Operating Systems</a><sup>3</sup>
+</td><td><a href='#python'>Python</a><sup>1</sup>
 </td></tr>
 </tbody></table>
 
