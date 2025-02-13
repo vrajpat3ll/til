@@ -1,4 +1,4 @@
-# Feature Scaling
+# Feature Scaling Techniques
 
 ## Why?
 

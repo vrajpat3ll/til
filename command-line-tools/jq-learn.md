@@ -26,4 +26,4 @@ $JSON_INPUT | jq
 ```
 
 ## Example
-![example-use-case](./example-use-case.png)
+![example-use-case](./jq-example-use-case.png)

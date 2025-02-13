@@ -1,5 +1,9 @@
 # Installing a Linux Distro alongside Windows
 
+- My machine: Dell XPS 15 9520 with Windows 11 Home
+
+- Linux Distro: I guess it is Ubuntu-based (`Pop!_OS`)
+
 ## Pre-requisites
 
 - Disable and then re-enable the following things after completely doing the dual boot procedure:
@@ -66,7 +70,8 @@
 ## ISSUE
 
 - Windows asks about recovery key after startup. How to fix?
+  - _Simple_. Just _turn on_ `secure boot` in BIOS options>Boot configuration.
 
 <h5 style="text-align: right;">
-    <em>last updated on 9th February, 2025</em>
+    <em>last updated on 13th February, 2025</em>
 <h6>
