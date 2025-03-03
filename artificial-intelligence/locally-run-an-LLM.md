@@ -1,4 +1,4 @@
-# Locally running an LLM
+# Locally running a Large Language Model
 
 - Download [LM Studio](https://lmstudio.ai/).
 - Open the app and download a model.
@@ -10,7 +10,3 @@ Resources used on my machine:
 | ----------- | --- | ------------------------ | ---- |
 | RAM         | CPU | RAM                      | CPU  |
 | upto 3.5 GB | 0%  | upto 4 GB                | ~14% |
-
-<h5 style="text-align: right;">
-    <em>last updated on 9th February, 2025</em>
-<h6>

@@ -21,9 +21,3 @@
 1. selenium
     - automate web browser interaction
     - python3.9+
-
-
-
-<h5 style="text-align: right;">
-    <em>last updated on 29th January, 2025</em>
-<h6>

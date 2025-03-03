@@ -63,9 +63,3 @@ $$
   - `Not Ideal for Non-Gaussian Data`: If the data does not follow a normal distribution, z-score scaling might not be as effective as other methods (e.g., robust scaling).
   - `Outliers Can Still Influence`: While more robust than min-max normalization, extreme outliers can still skew the mean and standard deviation.
   - `Dependent on Data`: Like min-max normalization, if new data is added, the mean and standard deviation might change, requiring re-scaling.
-
----
-
-<h5 style="text-align: right;">
-    <em>last updated on 27th January, 2025</em>
-<h6>

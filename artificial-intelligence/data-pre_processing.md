@@ -34,8 +34,3 @@ We can do either of the three given methods to get rid of missing values:
         Replace by mean of consecutive values
     </li>
 </ol>
-
-
-<h5 style="text-align: right;">
-    <em>last updated on 27th January, 2025</em>
-<h6>

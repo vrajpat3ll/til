@@ -71,7 +71,3 @@
 
 - Windows asks about recovery key after startup. How to fix?
   - _Simple_. Just _turn on_ `secure boot` in BIOS options>Boot configuration.
-
-<h5 style="text-align: right;">
-    <em>last updated on 13th February, 2025</em>
-<h6>

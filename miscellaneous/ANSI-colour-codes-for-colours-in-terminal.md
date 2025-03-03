@@ -16,7 +16,3 @@ To add some formatting/colour to a string in the terminal, you can do the follow
 |               |      | inverted-red    | 41   | inverted-magenta | 45   |
 |               |      | inverted-green  | 42   | inverted-cyan    | 46   |
 |               |      | inverted-yellow | 43   | inverted-white   | 47   |
-
-<h5 style="text-align: right;">
-    <em>last updated on 27th January, 2025</em>
-<h6>

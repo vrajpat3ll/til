@@ -23,8 +23,3 @@ If you still are unable to do so, there could be one or more of the following re
 - USB is corrupted
 - USB is damaged 
 - File system of the USB is not supported
-
-
-<h5 style="text-align: right;">
-    <em>last updated on 8th February, 2025</em>
-<h6>

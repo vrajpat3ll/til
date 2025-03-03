@@ -1,6 +1,63 @@
+from elements import HTMLElement
 from math import ceil
 import os
-from elements import HTMLElement
+import time
+
+
+def get_categories(base_path: str) -> list[str]:
+    """Walk the directory with the `base path` and get a list of all 
+    subdirectories at that level.
+
+    Args:
+        base_path (str): path of the directory inside which you have to find the categories
+
+    Returns:
+        list[str]: list of categories
+    """
+    avoid_dirs = [
+        "images",
+        "__pycache__",
+    ]
+
+    dirs = [
+        dir
+        for dir in os.listdir(base_path)
+        if os.path.isdir(dir) and dir not in avoid_dirs and ".git" not in dir
+    ]
+    return sorted(dirs)
+
+
+def get_tils(category):
+    return [
+        f"{category}/{til}"
+        for til in os.listdir(category)
+        if til.endswith(".md")
+    ]
+
+
+def get_title(til_file):
+    """Get the title for the til
+
+    Args:
+        til_file (str): path of the til file
+
+    Returns:
+        str: Title of the til
+    """
+    with open(til_file, "r", encoding='utf-8') as file:
+        for line in file:
+            line = line.strip()
+            if line.startswith('#'):
+                return line[1:].strip()
+        return "Find Out Yourself!"
+
+
+def count_tils(category):
+    return len([
+        til
+        for til in os.listdir(category)
+        if til.endswith(".md")
+    ])
 
 
 def sanitize_topic(topic: str) -> str:
@@ -12,88 +69,105 @@ def sanitize_topic(topic: str) -> str:
     return " ".join([piece.capitalize() for piece in topic.split(' ')])
 
 
-def count_articles(topic: str) -> int:
-    # ? Create a map object and store it in JSON to retrieve it later?
-    return len([dir for dir in os.listdir(topic) if os.path.abspath(dir).endswith(".md")])
-
-
-def dirs_to_avoid(base_path: str) -> list[str]:
-    return sorted([str(dir) for dir in os.listdir(base_path) if dir.startswith("_") or '.' in dir] + ["__pycache__"])
-
-
-def dirs_to_include(base_path: str, exclude: list[str] = []) -> list[str]:
-    return sorted([str(dir) for dir in os.listdir(base_path) if os.path.isdir(dir) and dir not in exclude])
-
-
 def add_categories(base_path: str):
 
-    avoid_dirs = dirs_to_avoid(base_path)
-    dirs_to_consider = dirs_to_include(base_path, exclude=avoid_dirs)
-
+    categories = get_categories(base_path)
     columns = 3
-    rows = ceil(len(dirs_to_consider) / 3)
+    rows = ceil(len(categories) / columns)
     # --------------------------------------------------------
-    categories = "## Categories\n\n"
-    categories += HTMLElement.table_start
+    content = "## Categories\n\n"
+    content += HTMLElement.table_start
     for row in range(rows):
-        categories += HTMLElement.row_start
 
+        content += HTMLElement.row_start
         for col in range(columns):
             ind = row * columns + col
-            if ind >= len(dirs_to_consider):
-                continue
+            if ind >= len(categories):
+                break
 
-            topic_link = dirs_to_consider[ind]
-            # ------------------------------
+            topic_link = categories[ind]
 
-            categories += HTMLElement.data_start
+            cell_data = HTMLElement.href('#'+topic_link, sanitize_topic(topic_link)) + \
+                HTMLElement.superscript('['+str(count_tils(topic_link))+']')
 
-            # link to Topic in README
-            cell_data = HTMLElement.href(
-                '#'+topic_link) + sanitize_topic(topic_link) + HTMLElement.href_end
-            cell_data += HTMLElement.superscript(count_articles(topic_link))
+            content += HTMLElement.data_start
+            content += cell_data
+            content += HTMLElement.data_end + '\n'
 
-            categories += cell_data
-            categories += HTMLElement.data_end
+        content += HTMLElement.row_end
 
-        categories += HTMLElement.row_end
-
-    categories += HTMLElement.table_end + '\n'
+    content += HTMLElement.table_end + '\n'
 
     return {
-        "content": categories,
-        "dirs": dirs_to_consider
+        "content": content,
+        "dirs": categories
     }
 
 
-def add_recent_tils():
-    # From all articles available, align them with the date modified
-    # sort them by date modified, take the latest 5
-    # append the recent ones in a table
-    return ""
+def add_recent_tils(n=5):
+
+    def get_modified_date(file):
+        return time.ctime(os.path.getmtime(file))
+
+    categories = get_categories('.')
+
+    all_tils = []
+    for category in categories:
+        for til in get_tils(category):
+            all_tils.append(til)
+
+    recent_tils = sorted(
+        all_tils,
+        key=lambda x: get_modified_date(x),
+        reverse=True
+    )[:n]
+
+    rows = ceil(len(recent_tils))
+    # --------------------------------------------------------
+    content = "## Recent TILs 🆕\n\n"
+
+    content += HTMLElement.table_start
+    for row in range(rows):
+
+        content += HTMLElement.row_start
+
+        topic_link = recent_tils[row]
+        cell_data = HTMLElement.href(topic_link, get_title(topic_link))
+
+        content += HTMLElement.data_start
+        content += cell_data
+        content += HTMLElement.data_end + '\n'
+
+        content += HTMLElement.row_end
+
+    content += HTMLElement.table_end + '\n'
+
+    return content
 
 
-def add_tils(dirs: list[str]):
+def add_tils(categories: list[str]):
     """Add tils present in the directories
 
     Args:
-        dirs (list[str]): list of directories in which we have to check for the tils
+        categories (list[str]): list of categories to use for the tils
 
     Returns:
         str: tils to be added in markdown format
     """
     # Add all tils with hyperlink to each article
     tils = {
-        "content": "",
-        "metadata": {}  # ? not yet sure of what to keep! file-name with last modified date?
+        "content": [],
+        "metadata": {
 
+        }  # ? not yet sure of what to keep! file-name with last modified date?
     }
-    for dir in dirs:
-        tils["content"] += f"## {sanitize_topic(dir)}\n\n"
+    for dir in categories:
+        til_content = f"## {sanitize_topic(dir)}\n\n"
         for article in [article for article in os.listdir(dir) if os.path.abspath(article).endswith(".md")]:
-            tils["content"] += "- " + \
-                HTMLElement.link(article, f'./{dir}')+'\n\n'
-            # tils["metadata"]
+            til_content += "- " + \
+                HTMLElement.link(
+                    get_title(f'./{dir}/{article}'), f'./{dir}/{article}')+'\n'
+        tils["content"].append(til_content)
     return tils
 
 
@@ -105,7 +179,6 @@ def main():
 
         # 1. Enter the header content, i.e., HEADER!
         README.write(HTMLElement.HEADER)  # ✅
-
         # 2. Enter the Categories section
         #     a. create a table with 3 columns in it and display the titles with the directories as their names
         #     b. each of the topics should have number of articles as superscript, so that we know about the most documented learned topic
@@ -124,10 +197,11 @@ def main():
         #   ❌ __ so depending on the path of an article, we would like to give it more detailed list
         # })
         task3 = add_tils(categories["dirs"])
-        README.write(task3["content"])
+        README.write("\n".join(task3["content"]))
 
         # 5. Add the FOOTER as well at the end!
-        README.write(HTMLElement.FOOTER)  # ✅
+        README.write("\n---\n\n" + \
+                     HTMLElement.FOOTER)  # ✅
 
 
 if __name__ == "__main__":
