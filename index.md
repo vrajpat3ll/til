@@ -1,42 +1,45 @@
 # Today I Learned
-    
+
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
+
+_21 TILs_ and counting...
 
 ## Categories
 
-<table align=center><tbody>
+<table align="center"><tbody>
 <tr>
-<td><a href='#artificial-intelligence'>Artificial Intelligence</a><sup>[4]</sup></td>
-<td><a href='#command-line-tools'>Command Line Tools</a><sup>[6]</sup></td>
-<td><a href='#computer-networks'>Computer Networks</a><sup>[1]</sup></td>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[4]</sup></td>
+<td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
+<td><a href="#computer-networks">Computer Networks</a><sup>[1]</sup></td>
 </tr>
 <tr>
-<td><a href='#docker'>Docker</a><sup>[1]</sup></td>
-<td><a href='#miscellaneous'>Miscellaneous</a><sup>[1]</sup></td>
-<td><a href='#operating-systems'>Operating Systems</a><sup>[3]</sup></td>
+<td><a href="#docker">Docker</a><sup>[1]</sup></td>
+<td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
 </tr>
 <tr>
-<td><a href='#python'>Python</a><sup>[2]</sup></td>
+<td><a href="#python">Python</a><sup>[2]</sup></td>
+<td><a href="#web-development">Web Development</a><sup>[3]</sup></td>
 </tr>
 </tbody></table>
 
 ## Recent TILs 🆕
 
-<table align=center><tbody>
+<table align="center"><tbody>
 <tr>
-<td><a href='artificial-intelligence/machine-learning-basics.md'>Datasets that are useful for learning ML</a></td>
+<td><a href="web-development/css.md">Intro to CSS</a></td>
 </tr>
 <tr>
-<td><a href='python/important-modules-to-learn-about.md'>Important Modules To Learn About</a></td>
+<td><a href="web-development/html.md">Basics of HTML</a></td>
 </tr>
 <tr>
-<td><a href='operating-systems/removing-write-protection-from-disk.md'>Removing write protection from disk / USB drive</a></td>
+<td><a href="web-development/web.md">What is web?</a></td>
 </tr>
 <tr>
-<td><a href='operating-systems/installing-a-Linux-Distro-alongside-Windows.md'>Installing a Linux Distro alongside Windows</a></td>
+<td><a href="artificial-intelligence/data-pre_processing.md">Data Pre-Processing</a></td>
 </tr>
 <tr>
-<td><a href='operating-systems/defragging-an-SSD.md'>Never defrag an SSD</a></td>
+<td><a href="command-line-tools/fzf-previewing-a-file.md">`fzf`: Previewing a file</a></td>
 </tr>
 </tbody></table>
 
@@ -45,14 +48,14 @@
 - [Data Pre-Processing](./artificial-intelligence/data-pre_processing.md)
 - [Feature Scaling Techniques](./artificial-intelligence/feature-scaling-techniques.md)
 - [Locally running a Large Language Model](./artificial-intelligence/locally-run-an-LLM.md)
-- [Datasets that are useful for learning ML](./artificial-intelligence/machine-learning-basics.md)
+- [Datasets that are useful for learning ML](./artificial-intelligence/useful-datasets-to-learn-ML.md)
 
 ## Command Line Tools
 
 - [`bat`: `cat`, but with syntax highlighting!](./command-line-tools/bat.md)
+- [`fzf`: Previewing a file](./command-line-tools/fzf-previewing-a-file.md)
 - [`fzf`: A general-purpose command-line fuzzy finder](./command-line-tools/fzf.md)
 - [`jq`: JSON formatter for the terminal](./command-line-tools/jq.md)
-- [Previewing a file using `fzf`](./command-line-tools/previewing-a-file-using-fzf.md)
 - [`yadm`: Yet Another Dot Manager](./command-line-tools/yadm.md)
 - [`zoxide`: `cd` on steroids](./command-line-tools/zoxide.md)
 
@@ -79,8 +82,19 @@
 - [Find out last modified date of a file](./python/find-out-last-modified-date-of-a-file.md)
 - [Important Modules To Learn About](./python/important-modules-to-learn-about.md)
 
+## Web Development
+
+- [Intro to CSS](./web-development/css.md)
+- [Basics of HTML](./web-development/html.md)
+- [What is web?](./web-development/web.md)
+
 ---
 
 ## About
 
-Inspired from [Bhupesh-V/til](https://github.com/Bhupesh-V/til).
+I found out about TILs from [Bhupesh-V/til](https://github.com/Bhupesh-V/til).
+
+Other resources:
+- [jbranchaud](https://github.com/jbranchaud/til)
+- [thoughtbot](https://github.com/thoughtbot/til)
+- [simonw](https://github.com/simonw/til)

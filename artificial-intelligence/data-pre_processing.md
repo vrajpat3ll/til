@@ -23,14 +23,6 @@
 
 We can do either of the three given methods to get rid of missing values:
 
-<ol>
-    <li>
-        Drop rows or columns that contain missing values
-    </li>
-    <li>
-        Replace by mean of the entire feature
-    </li>
-    <li>
-        Replace by mean of consecutive values
-    </li>
-</ol>
+1. Drop rows or columns that contain missing values
+1. Replace by mean of the entire feature
+1. Replace by mean of consecutive values
