@@ -126,7 +126,7 @@ def add_categories(base_path: str):
 def add_recent_tils(n=5):
 
     def get_modified_date(file):
-        return time.ctime(os.path.getmtime(file))
+        return os.path.getmtime(file)
 
     categories = get_categories('.')
 
@@ -211,7 +211,6 @@ async def create_index():
         task3 = add_tils(categories["dirs"])
         README.write("\n".join(task3["content"]))
 
-        # 5. Add the FOOTER as well at the end!
         README.write("\n---\n\n" + HTMLElement.FOOTER)
 
 

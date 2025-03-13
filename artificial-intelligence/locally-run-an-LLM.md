@@ -1,4 +1,4 @@
-# Locally running a Large Language Model
+# _Large Language Models_: Locally running one 
 
 - Download [LM Studio](https://lmstudio.ai/).
 - Open the app and download a model.

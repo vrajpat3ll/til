@@ -2,19 +2,19 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_21 TILs_ and counting...
+_23 TILs_ and counting...
 
 ## Categories
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[4]</sup></td>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[5]</sup></td>
 <td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
 <td><a href="#computer-networks">Computer Networks</a><sup>[1]</sup></td>
 </tr>
 <tr>
 <td><a href="#docker">Docker</a><sup>[1]</sup></td>
-<td><a href="#miscellaneous">Miscellaneous</a><sup>[1]</sup></td>
+<td><a href="#miscellaneous">Miscellaneous</a><sup>[2]</sup></td>
 <td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
 </tr>
 <tr>
@@ -26,9 +26,10 @@ _21 TILs_ and counting...
 ## Artificial Intelligence
 
 - [Data Pre-Processing](./artificial-intelligence/data-pre_processing.md)
+- [_Deep Learning_: Resources for learning](./artificial-intelligence/deep-learning.md)
 - [Feature Scaling Techniques](./artificial-intelligence/feature-scaling-techniques.md)
-- [Locally running a Large Language Model](./artificial-intelligence/locally-run-an-LLM.md)
-- [Datasets that are useful for learning ML](./artificial-intelligence/useful-datasets-to-learn-ML.md)
+- [_Large Language Models_: Locally running one](./artificial-intelligence/locally-run-an-LLM.md)
+- [_Datasets_ for practicing](./artificial-intelligence/useful-datasets-to-learn-ML.md)
 
 ## Command Line Tools
 
@@ -50,6 +51,7 @@ _21 TILs_ and counting...
 ## Miscellaneous
 
 - [ANSI colour codes for colours in terminal](./miscellaneous/ANSI-colour-codes-for-colours-in-terminal.md)
+- [_Compression_: Byte Pair Encoding](./miscellaneous/byte-pair-encoding.md)
 
 ## Operating Systems
 
