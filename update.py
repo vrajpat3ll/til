@@ -3,7 +3,6 @@ from elements import HTMLElement
 from math import ceil
 import os
 import pathlib
-import time
 
 AVOID_DIRS = [
     ".git",
@@ -244,8 +243,7 @@ async def main():
     task1 = asyncio.create_task(create_index())
     task2 = asyncio.create_task(create_readme())
 
-    await task1
-    await task2
+    await asyncio.gather(task1, task2)
 
 if __name__ == "__main__":
     asyncio.run(main())

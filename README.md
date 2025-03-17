@@ -2,34 +2,45 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_23 TILs_ and counting...
+_29 TILs_ and counting...
 
 ## Categories
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[5]</sup></td>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[6]</sup></td>
+<td><a href="#c++">C++</a><sup>[3]</sup></td>
 <td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
-<td><a href="#computer-networks">Computer Networks</a><sup>[1]</sup></td>
 </tr>
 <tr>
+<td><a href="#computer-networks">Computer Networks</a><sup>[1]</sup></td>
 <td><a href="#docker">Docker</a><sup>[1]</sup></td>
+<td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td>
+</tr>
+<tr>
 <td><a href="#miscellaneous">Miscellaneous</a><sup>[2]</sup></td>
 <td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
+<td><a href="#python">Python</a><sup>[3]</sup></td>
 </tr>
 <tr>
-<td><a href="#python">Python</a><sup>[2]</sup></td>
 <td><a href="#web-development">Web Development</a><sup>[3]</sup></td>
 </tr>
 </tbody></table>
 
 ## Artificial Intelligence
 
+- [_Deep Learning_: **CNNs**](./artificial-intelligence/conv-neural-networks.md)
 - [Data Pre-Processing](./artificial-intelligence/data-pre_processing.md)
 - [_Deep Learning_: Resources for learning](./artificial-intelligence/deep-learning.md)
 - [Feature Scaling Techniques](./artificial-intelligence/feature-scaling-techniques.md)
 - [_Large Language Models_: Locally running one](./artificial-intelligence/locally-run-an-LLM.md)
 - [_Datasets_ for practicing](./artificial-intelligence/useful-datasets-to-learn-ML.md)
+
+## C++
+
+- [std::copy and its design](./c++/copy-and-its-design.md)
+- [Shallow Copy vs Deep Copy](./c++/deep-vs-shallow-copy.md)
+- [`malloc` vs `new`](./c++/malloc-new.md)
 
 ## Command Line Tools
 
@@ -48,6 +59,10 @@ _23 TILs_ and counting...
 
 - [Docker in 70 or so lines](./docker/docker-in-70-or-so-lines.md)
 
+## Kubernetes
+
+- [_Helm Charts_: the package manager for Kubernetes](./kubernetes/helm-charts.md)
+
 ## Miscellaneous
 
 - [ANSI colour codes for colours in terminal](./miscellaneous/ANSI-colour-codes-for-colours-in-terminal.md)
@@ -63,6 +78,7 @@ _23 TILs_ and counting...
 
 - [Find out last modified date of a file](./python/find-out-last-modified-date-of-a-file.md)
 - [Important Modules To Learn About](./python/important-modules-to-learn-about.md)
+- [Walrus operator](./python/walrus-operator.md)
 
 ## Web Development
 
