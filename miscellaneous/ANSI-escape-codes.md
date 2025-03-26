@@ -1,4 +1,6 @@
-# ANSI colour codes for colours in terminal
+# ANSI escape codes
+
+> [Link to a gist!](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797.js)
 
 To add some formatting/colour to a string in the terminal, you can do the following:
 
