@@ -10,6 +10,7 @@ AVOID_DIRS = [
     "__pycache__",
     "images",
     "site",
+    "work-in-progress",
 ]
 
 

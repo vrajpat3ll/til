@@ -2,19 +2,19 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_33 TILs_ and counting...
+_36 TILs_ and counting...
 
 ## Categories
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[7]</sup></td>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[9]</sup></td>
 <td><a href="#bash">Bash</a><sup>[1]</sup></td>
 <td><a href="#c++">C++</a><sup>[3]</sup></td>
 </tr>
 <tr>
 <td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
-<td><a href="#computer-networks">Computer Networks</a><sup>[2]</sup></td>
+<td><a href="#computer-networks">Computer Networks</a><sup>[3]</sup></td>
 <td><a href="#docker">Docker</a><sup>[1]</sup></td>
 </tr>
 <tr>
@@ -32,19 +32,19 @@ _33 TILs_ and counting...
 
 <table align="center"><tbody>
 <tr>
+<td><a href="artificial-intelligence/papers-to-read.md">Papers on the reading list</a></td>
+</tr>
+<tr>
+<td><a href="computer-networks/signal.md">Signals</a></td>
+</tr>
+<tr>
+<td><a href="artificial-intelligence/reinforcement-learning.md">_Reinforcement Learning_: The 3rd class of Learning Problems</a></td>
+</tr>
+<tr>
 <td><a href="miscellaneous/ANSI-escape-codes.md">ANSI escape codes</a></td>
 </tr>
 <tr>
 <td><a href="computer-networks/sockets.md">_Sockets_: A guide</a></td>
-</tr>
-<tr>
-<td><a href="bash/basics.md">_Basic syntax_: What is it really?</a></td>
-</tr>
-<tr>
-<td><a href="miscellaneous/formatting-syntax.md">Formatting Syntax for Github Markdown</a></td>
-</tr>
-<tr>
-<td><a href="artificial-intelligence/feature-selection.md">_Regularization_: A way to select features</a></td>
 </tr>
 </tbody></table>
 
@@ -57,6 +57,8 @@ _33 TILs_ and counting...
 - [_Regularization_: A way to select features](./artificial-intelligence/feature-selection.md)
 - [_Deep Learning_: Resources for learning](./artificial-intelligence/deep-learning.md)
 - [Data Pre-Processing](./artificial-intelligence/data-pre_processing.md)
+- [_Reinforcement Learning_: The 3rd class of Learning Problems](./artificial-intelligence/reinforcement-learning.md)
+- [Papers on the reading list](./artificial-intelligence/papers-to-read.md)
 
 ## Bash
 
@@ -80,6 +82,7 @@ _33 TILs_ and counting...
 ## Computer Networks
 
 - [_Sockets_: A guide](./computer-networks/sockets.md)
+- [Signals](./computer-networks/signal.md)
 - [Sniff packets on the network](./computer-networks/sniff-packets-on-the-network.md)
 
 ## Docker
