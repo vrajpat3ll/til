@@ -2,28 +2,29 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_36 TILs_ and counting...
+_39 TILs_ and counting...
 
 ## Categories
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[9]</sup></td>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[10]</sup></td>
 <td><a href="#bash">Bash</a><sup>[1]</sup></td>
 <td><a href="#c++">C++</a><sup>[3]</sup></td>
 </tr>
 <tr>
 <td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
-<td><a href="#computer-networks">Computer Networks</a><sup>[3]</sup></td>
+<td><a href="#computer-networks">Computer Networks</a><sup>[4]</sup></td>
 <td><a href="#docker">Docker</a><sup>[1]</sup></td>
 </tr>
 <tr>
 <td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td>
+<td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td>
 <td><a href="#miscellaneous">Miscellaneous</a><sup>[3]</sup></td>
-<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
 </tr>
 <tr>
-<td><a href="#python">Python</a><sup>[3]</sup></td>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
+<td><a href="#python">Python</a><sup>[4]</sup></td>
 <td><a href="#web-development">Web Development</a><sup>[3]</sup></td>
 </tr>
 </tbody></table>
@@ -39,6 +40,7 @@ _36 TILs_ and counting...
 - [Data Pre-Processing](./artificial-intelligence/data-pre_processing.md)
 - [_Reinforcement Learning_: The 3rd class of Learning Problems](./artificial-intelligence/reinforcement-learning.md)
 - [Papers on the reading list](./artificial-intelligence/papers-to-read.md)
+- [_MCP Server_: What is it all about?](./artificial-intelligence/mcp-server.md)
 
 ## Bash
 
@@ -61,6 +63,7 @@ _36 TILs_ and counting...
 
 ## Computer Networks
 
+- [_SSH_: Cool way to connect to another machine in a local network](./computer-networks/ssh.md)
 - [_Sockets_: A guide](./computer-networks/sockets.md)
 - [Signals](./computer-networks/signal.md)
 - [Sniff packets on the network](./computer-networks/sniff-packets-on-the-network.md)
@@ -87,6 +90,7 @@ _36 TILs_ and counting...
 
 ## Python
 
+- [_uv_: The new virtual environment](./python/uv.md)
 - [Find out last modified date of a file](./python/find-out-last-modified-date-of-a-file.md)
 - [Important Modules To Learn About](./python/important-modules-to-learn-about.md)
 - [Walrus operator](./python/walrus-operator.md)

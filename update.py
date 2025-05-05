@@ -3,6 +3,7 @@ from elements import HTMLElement
 from math import ceil
 import os
 import pathlib
+import subprocess as sp
 
 AVOID_DIRS = [
     ".git",
@@ -13,6 +14,14 @@ AVOID_DIRS = [
     "site",
     "work-in-progress",
 ]
+
+res = sp.run(
+    ["git", "ls-files", "--others", "--exclude-standard"],
+    stdout=sp.PIPE,
+    text=True
+)
+untracked_files = res.stdout.strip().split('\n') if res.stdout else []
+AVOID_TILS = untracked_files
 
 
 def get_categories(base_path) -> list:
@@ -46,7 +55,8 @@ def get_tils(category):
     return [
         pathlib.Path(til)
         for til in os.listdir(category)
-        if til.endswith(".md")
+        if til.endswith(".md") 
+        and str(category / pathlib.Path(til)) not in AVOID_TILS
     ]
 
 
@@ -104,9 +114,13 @@ def add_categories(base_path: str):
             ind = row * columns + col
             if ind >= len(categories):
                 break
-
             topic_link = categories[ind]
-
+            while count_tils(topic_link) == 0: 
+                if ind >= len(categories):
+                    break
+                ind += 1
+                topic_link = categories[ind] 
+            
             cell_data = HTMLElement.href('#'+topic_link, sanitize_topic(topic_link)) + \
                 HTMLElement.superscript('['+str(count_tils(topic_link))+']')
 
@@ -182,15 +196,16 @@ def add_tils(categories: list[str]):
         }  # ? not yet sure of what to keep! file-name with last modified date?
     }
     for category in categories:
-        til_content = f"## {sanitize_topic(category)}\n\n"
-        for article in [article for article in os.listdir(category) if os.path.abspath(article).endswith(".md")]:
-            til_content += \
-                "- " + \
-                HTMLElement.link(
-                    get_title(pathlib.Path('.') / category / article),
-                    f'./{category}/{article}') + \
-                '\n'
-        tils["content"].append(til_content)
+        if count_tils(category):
+            til_content = f"## {sanitize_topic(category)}\n\n"
+            for article in get_tils(category):
+                til_content += \
+                    "- " + \
+                    HTMLElement.link(
+                        get_title(pathlib.Path('.') / category / article),
+                        f'./{category}/{article}') + \
+                    '\n'
+            tils["content"].append(til_content)
     return tils
 
 
