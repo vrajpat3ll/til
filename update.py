@@ -6,6 +6,7 @@ import pathlib
 
 AVOID_DIRS = [
     ".git",
+    ".obsidian",
     ".venv",
     "__pycache__",
     "images",

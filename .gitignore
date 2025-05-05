@@ -1,5 +1,6 @@
 **/__pycache__/**
 **/.venv/**
+**/.obsidian/**
 site
 work-in-progress
 .env

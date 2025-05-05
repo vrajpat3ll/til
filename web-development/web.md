@@ -1,6 +1,6 @@
 # What is web?
 
-Short for World Wide Web, is a system of intert-linked documents and resources that are connected/accessed via the internet(it is a network of computers, different from the web). It allows users to view and interact with websites and web applications through a web browser (like Chrome).
+Short for World Wide Web, is a system of inter-linked documents and resources that are connected/accessed via the internet(it is a network of computers, different from the web). It allows users to view and interact with websites and web applications through a web browser (like Chrome).
 
 ## How it works?
 
