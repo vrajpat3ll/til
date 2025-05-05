@@ -116,9 +116,9 @@ def add_categories(base_path: str):
                 break
             topic_link = categories[ind]
             while count_tils(topic_link) == 0: 
+                ind += 1
                 if ind >= len(categories):
                     break
-                ind += 1
                 topic_link = categories[ind] 
             
             cell_data = HTMLElement.href('#'+topic_link, sanitize_topic(topic_link)) + \
