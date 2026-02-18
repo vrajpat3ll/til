@@ -59,7 +59,6 @@ How can we use Deep Neural Networks to model Q-functions?
 ### Any Downsides?
 
 - Complexity:
-
   - Can model scenarios where action space is _small and discrete_.
   - Cannot handle continuous action space.
 
