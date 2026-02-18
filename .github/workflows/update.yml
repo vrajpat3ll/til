@@ -1,0 +1,43 @@
+name: Auto Update README & Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**" # run only if docs/ content changes
+      - "update.py"
+      - "elements.py"
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]' # prevent CI loop
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: "pyproject.toml"
+
+      - uses: astral-sh/setup-uv@v7
+      - run: uv sync --locked --dev
+      - run: uv run update.py
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions@users.noreply.github.com"
+
+          git add -A
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update README and index"
+            git push
+          fi
