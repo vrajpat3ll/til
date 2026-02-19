@@ -1,24 +1,39 @@
 name: Documentation
+
 on:
   push:
     branches:
       - main
+    paths:
+      - "docs/**"
+
+  workflow_run:
+    workflows: ["Auto Update README & Index"]
+    types: [completed]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
   deploy:
+    if: |
+      github.event_name == 'push' ||
+      github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/configure-pages@v5
-      - uses: actions/checkout@v5
 
+      - name: Checkout latest commit
+        uses: actions/checkout@v5
+        with:
+          ref: main
       - name: "Set up Python"
-        uses: actions/setup-python@v6
+      - uses: actions/setup-python@v6
         with:
           python-version-file: "pyproject.toml"
 
