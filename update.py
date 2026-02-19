@@ -1,11 +1,13 @@
 import asyncio
-from elements import HTMLElement
 from math import ceil
-import os
-import pathlib
+from pathlib import Path
 import subprocess as sp
 
-AVOID_DIRS = [
+from elements import HTMLElement
+
+DOCS_DIR = Path("docs")
+
+AVOID_DIRS = {
     ".git",
     ".obsidian",
     ".venv",
@@ -13,232 +15,156 @@ AVOID_DIRS = [
     "images",
     "site",
     "work-in-progress",
-]
+}
 
 res = sp.run(
     ["git", "ls-files", "--others", "--exclude-standard"],
-    stdout=sp.PIPE,
+    capture_output=True,
     text=True,
 )
-untracked_files = res.stdout.strip().split("\n") if res.stdout else {}
-AVOID_TILS = {str(pathlib.Path("docs/index.md").resolve())}.union(untracked_files)
+
+untracked_files = res.stdout.splitlines() if res.stdout else []
+AVOID_TILS = {str((DOCS_DIR / "index.md").resolve()), *untracked_files}
 
 
-def get_categories(base_path) -> list:
-    """Walk the directory with the `base path` and get a list of all
-    subdirectories at that level.
-
-    Args:
-        base_path (str): path of the directory inside which you have to find the categories
-
-    Returns:
-        list[str]: list of categories
-    """
-
+def get_categories(base_path: Path) -> list[str]:
+    """Return sorted list of category directories."""
     return sorted(
-        d
-        for d in os.listdir(base_path)
-        if os.path.isdir(pathlib.Path(base_path) / d) and d not in AVOID_DIRS
+        d.name for d in base_path.iterdir() if d.is_dir() and d.name not in AVOID_DIRS
     )
 
 
-def get_tils(category):
-    """get all TILs from a category
-
-    Args:
-        category (str): the category
-
-    Returns:
-        list[str]: all TILs of a category
-    """
-    category_path = pathlib.Path("docs") / category
-    return [
-        p
-        for p in category_path.iterdir()
-        if p.suffix == ".md" and str(p) not in AVOID_TILS
-    ]
+def get_tils(category: str) -> list[Path]:
+    """Return all markdown TIL files in a category."""
+    category_path = DOCS_DIR / category
+    return [p for p in category_path.glob("*.md") if str(p) not in AVOID_TILS]
 
 
-def get_title(til_file):
-    """Get the title for the til
-
-    Args:
-        til_file (str): path of the til file
-
-    Returns:
-        str: Title of the til
-    """
-    ret = "Find Out Yourself!"
+def get_title(file_path: Path) -> str:
+    """Extract first markdown heading as title."""
     try:
-        with open(til_file, "r", encoding="utf-8") as file:
-            for line in file:
-                line = line.strip()
+        with file_path.open(encoding="utf-8") as f:
+            for line in f:
                 if line.startswith("#"):
-                    ret = line[1:].strip()
-                    return ret
+                    return line.lstrip("#").strip()
     except Exception as e:
         print(e)
-        pass
 
-    return ret
-
-
-def count_tils(category):
-    return len(get_tils(category))
+    return "Find Out Yourself!"
 
 
-def count_total_tils():
-    categories = get_categories("docs")
-    return sum([1 for category in categories for til in get_tils(category)])
+def count_total_tils() -> int:
+    return sum(len(get_tils(cat)) for cat in get_categories(DOCS_DIR))
 
 
 def sanitize_topic(topic: str) -> str:
-    # ? How do I proceed to do it from here?
-    # > substitute all - with a whitespace and _ with -
-
-    topic = " ".join(topic.split("-"))
-    topic = "-".join(topic.split("_"))
-    return " ".join([piece.capitalize() for piece in topic.split(" ")])
+    """Convert directory name to readable title."""
+    topic = topic.replace("_", " ").replace("-", " ")
+    return " ".join(word.capitalize() for word in topic.split())
 
 
-def add_categories(base_path: str):
-    categories = get_categories(base_path)
-    columns = 3
-    rows = ceil(len(categories) / columns)
-    # --------------------------------------------------------
-    content = "## Categories\n\n"
-    content += HTMLElement.table_start
-    for row in range(rows):
+def format_link(path: Path, for_docs_site: bool) -> str:
+    """
+    Format link depending on output location.
+
+    for_docs_site=True  -> index.md (inside docs/)
+    for_docs_site=False -> README.md (repo root)
+    """
+    path_str = path.as_posix()
+
+    if for_docs_site:
+        return path_str.removeprefix("docs/")  # remove docs/ prefix
+    return path_str  # keep docs/ prefix
+
+
+def build_categories_table() -> tuple[str, list[str]]:
+    categories = get_categories(DOCS_DIR)
+    categories = [c for c in categories if get_tils(c)]
+
+    cols = 3
+    rows = ceil(len(categories) / cols)
+
+    content = "## Categories\n\n" + HTMLElement.table_start
+
+    for r in range(rows):
         content += HTMLElement.row_start
-        for col in range(columns):
-            ind = row * columns + col
-            if ind >= len(categories):
+        for c in range(cols):
+            idx = r * cols + c
+            if idx >= len(categories):
                 break
-            topic_link = categories[ind]
-            while count_tils(topic_link) == 0:
-                ind += 1
-                if ind >= len(categories):
-                    break
-                topic_link = categories[ind]
 
-            cell_data = HTMLElement.href(
-                "#" + topic_link, sanitize_topic(topic_link)
-            ) + HTMLElement.superscript("[" + str(count_tils(topic_link)) + "]")
+            cat = categories[idx]
+            count = len(get_tils(cat))
 
-            content += HTMLElement.data_start
-            content += cell_data
-            content += HTMLElement.data_end + "\n"
+            link = HTMLElement.href(f"#{cat}", sanitize_topic(cat))
+            badge = HTMLElement.superscript(f"[{count}]")
 
+            content += HTMLElement.data_start + link + badge + HTMLElement.data_end
         content += HTMLElement.row_end
 
     content += HTMLElement.table_end + "\n"
+    return content, categories
 
-    return {"content": content, "dirs": categories}
 
+def build_recent_tils(n: int = 5) -> str:
+    all_tils = [til for cat in get_categories(DOCS_DIR) for til in get_tils(cat)]
 
-def add_recent_tils(n=5):
-    def get_modified_date(file):
-        return os.path.getmtime(file)
+    recent = sorted(all_tils, key=lambda p: p.stat().st_mtime, reverse=True)[:n]
 
-    categories = get_categories("docs")
+    content = "## Recent TILs 🆕\n\n" + HTMLElement.table_start
 
-    all_tils = []
-    for category in categories:
-        for til in get_tils(category):
-            all_tils.append(str(til).replace("\\", "/"))
-
-    recent_tils = sorted(all_tils, key=lambda x: get_modified_date(x), reverse=True)[:n]
-
-    rows = ceil(len(recent_tils))
-    # --------------------------------------------------------
-    content = "## Recent TILs 🆕\n\n"
-
-    content += HTMLElement.table_start
-    for row in range(rows):
-        content += HTMLElement.row_start
-
-        topic_link = recent_tils[row]
-        cell_data = HTMLElement.href(topic_link, get_title(topic_link))
-
-        content += HTMLElement.data_start
-        content += cell_data
-        content += HTMLElement.data_end + "\n"
-
-        content += HTMLElement.row_end
+    for til in recent:
+        content += (
+            HTMLElement.row_start
+            + HTMLElement.data_start
+            + HTMLElement.href(format_link(til, True), get_title(til))
+            + HTMLElement.data_end
+            + HTMLElement.row_end
+        )
 
     content += HTMLElement.table_end + "\n"
-
     return content
 
 
-def add_tils(categories: list[str]):
-    """Add tils present in the directories
+def build_til_sections(categories: list[str], for_docs_site: bool) -> str:
+    sections = []
 
-    Args:
-        categories (list[str]): list of categories to use for the tils
+    for cat in categories:
+        tils = get_tils(cat)
+        if not tils:
+            continue
 
-    Returns:
-        str: tils to be added in markdown format
-    """
-    # Add all tils with hyperlink to each article
-    tils = {
-        "content": [],
-        "metadata": {},  # ? not yet sure of what to keep! file-name with last modified date?
-    }
-    for category in categories:
-        if count_tils(category):
-            til_content = f"## {sanitize_topic(category)}\n\n"
-            for article in get_tils(category):
-                til_content += (
-                    "- "
-                    + HTMLElement.link(
-                        get_title(article),
-                        f"{article}",
-                    )
-                    + "\n"
-                )
-            tils["content"].append(til_content)
-    return tils
+        section = f"## {sanitize_topic(cat)}\n\n"
+        for til in tils:
+            link = format_link(til, for_docs_site)
+            section += f"- {HTMLElement.link(get_title(til), link)}\n"
+
+        sections.append(section)
+
+    return "\n".join(sections)
 
 
-async def create_index():
-    # assuming you have written the article,
-    # now we gotta make a index.md file for the viewers to be shown
-    with open("docs/index.md", "w", encoding="utf-8") as README:
-        README.write(HTMLElement.HEADER)
+def write_index():
+    content, categories = build_categories_table()
 
-        README.write(f"_{count_total_tils()} TILs_ and counting...\n\n")
-
-        categories = add_categories("docs")
-        README.write(categories["content"])
-
-        task2 = add_recent_tils()
-        README.write(task2)  # ❌
-
-        task3 = add_tils(categories["dirs"])
-        README.write("\n".join(task3["content"]))
-
-        README.write("\n---\n\n" + HTMLElement.FOOTER)
+    with (DOCS_DIR / "index.md").open("w", encoding="utf-8") as f:
+        f.write(HTMLElement.HEADER)
+        f.write(f"_{count_total_tils()} TILs_ and counting...\n\n")
+        f.write(content)
+        f.write(build_recent_tils())
+        f.write(build_til_sections(categories, True))
+        f.write("\n---\n\n" + HTMLElement.FOOTER)
 
 
-async def create_readme():
-    dummy_file = pathlib.Path("README.md")
-    file = dummy_file
+def write_readme():
+    content, categories = build_categories_table()
 
-    # assuming you have written the article,
-    # now we gotta make a README.md file for the viewers to be shown on github!
-    # right now, not updating the original README.md for reference!
-    with open(file, "w", encoding="utf-8") as README:
-        README.write(HTMLElement.HEADER)
-        README.write(f"_{count_total_tils()} TILs_ and counting...\n\n")
-
-        categories = add_categories("docs")
-        README.write(categories["content"])
-
-        tils = add_tils(categories["dirs"])
-        README.write("\n".join(tils["content"]))
-
-        README.write("\n---\n\n" + HTMLElement.FOOTER)
+    with Path("README.md").open("w", encoding="utf-8") as f:
+        f.write(HTMLElement.HEADER)
+        f.write(f"_{count_total_tils()} TILs_ and counting...\n\n")
+        f.write(content)
+        f.write(build_til_sections(categories, False))
+        f.write("\n---\n\n" + HTMLElement.FOOTER)
 
 
 async def main():
@@ -247,10 +173,11 @@ async def main():
     1. Create an index.md file for the index of the website
     2. Create readme file for github repo
     """
-    task1 = asyncio.create_task(create_index())
-    task2 = asyncio.create_task(create_readme())
 
-    await asyncio.gather(task1, task2)
+    await asyncio.gather(
+        asyncio.to_thread(write_index),
+        asyncio.to_thread(write_readme),
+    )
 
 
 if __name__ == "__main__":
