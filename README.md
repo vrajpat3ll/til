@@ -19,17 +19,17 @@ _43 TILs_ and counting...
 
 ## Artificial Intelligence
 
-- [Feature Scaling Techniques](docs/artificial-intelligence/feature-scaling-techniques.md)
-- [_Datasets_ for practicing](docs/artificial-intelligence/useful-datasets-to-learn-ML.md)
-- [_Deep Learning_: Resources for learning](docs/artificial-intelligence/deep-learning.md)
-- [_MCP Server_: What is it all about?](docs/artificial-intelligence/mcp-server.md)
-- [_Deep Learning_: **CNNs**](docs/artificial-intelligence/conv-neural-networks.md)
-- [_RAG_: What is it?](docs/artificial-intelligence/rag.md)
 - [Data Pre-Processing](docs/artificial-intelligence/data-pre_processing.md)
+- [Feature Scaling Techniques](docs/artificial-intelligence/feature-scaling-techniques.md)
 - [_Reinforcement Learning_: The 3rd class of Learning Problems](docs/artificial-intelligence/reinforcement-learning.md)
+- [_MCP Server_: What is it all about?](docs/artificial-intelligence/mcp-server.md)
+- [_Deep Learning_: Resources for learning](docs/artificial-intelligence/deep-learning.md)
+- [_Deep Learning_: **CNNs**](docs/artificial-intelligence/conv-neural-networks.md)
 - [Papers on the reading list](docs/artificial-intelligence/papers-to-read.md)
-- [_Large Language Models_: Locally running one](docs/artificial-intelligence/locally-run-an-LLM.md)
 - [_Regularization_: A way to select features](docs/artificial-intelligence/feature-selection.md)
+- [_Datasets_ for practicing](docs/artificial-intelligence/useful-datasets-to-learn-ML.md)
+- [_Large Language Models_: Locally running one](docs/artificial-intelligence/locally-run-an-LLM.md)
+- [_RAG_: What is it?](docs/artificial-intelligence/rag.md)
 
 ## Bash
 
@@ -37,26 +37,26 @@ _43 TILs_ and counting...
 
 ## C++
 
-- [std::copy and its design](docs/c++/copy-and-its-design.md)
-- [_lock_guard_: Locking mechanism](docs/c++/lock-guard.md)
-- [`malloc` vs `new`](docs/c++/malloc-new.md)
 - [Shallow Copy vs Deep Copy](docs/c++/deep-vs-shallow-copy.md)
+- [std::copy and its design](docs/c++/copy-and-its-design.md)
+- [`malloc` vs `new`](docs/c++/malloc-new.md)
+- [_lock_guard_: Locking mechanism](docs/c++/lock-guard.md)
 
 ## Command Line Tools
 
-- [`zoxide`: `cd` on steroids](docs/command-line-tools/zoxide.md)
-- [`fzf`: Previewing a file](docs/command-line-tools/fzf-previewing-a-file.md)
-- [`jq`: JSON formatter for the terminal](docs/command-line-tools/jq.md)
-- [`yadm`: Yet Another Dot Manager](docs/command-line-tools/yadm.md)
 - [`bat`: `cat`, but with syntax highlighting!](docs/command-line-tools/bat.md)
+- [`yadm`: Yet Another Dot Manager](docs/command-line-tools/yadm.md)
+- [`zoxide`: `cd` on steroids](docs/command-line-tools/zoxide.md)
 - [`fzf`: A general-purpose command-line fuzzy finder](docs/command-line-tools/fzf.md)
+- [`jq`: JSON formatter for the terminal](docs/command-line-tools/jq.md)
+- [`fzf`: Previewing a file](docs/command-line-tools/fzf-previewing-a-file.md)
 
 ## Computer Networks
 
-- [_SSH_: Cool way to connect to another machine in a local network](docs/computer-networks/ssh.md)
-- [Signals](docs/computer-networks/signal.md)
-- [_Sockets_: A guide](docs/computer-networks/sockets.md)
 - [Sniff packets on the network](docs/computer-networks/sniff-packets-on-the-network.md)
+- [_Sockets_: A guide](docs/computer-networks/sockets.md)
+- [Signals](docs/computer-networks/signal.md)
+- [_SSH_: Cool way to connect to another machine in a local network](docs/computer-networks/ssh.md)
 
 ## Docker
 
@@ -72,29 +72,29 @@ _43 TILs_ and counting...
 
 ## Miscellaneous
 
-- [Data structures used for string matching and checking for existence in a hashmap](docs/miscellaneous/username-check-if-exist-or-not.md)
 - [Formatting Syntax for Github Markdown](docs/miscellaneous/formatting-syntax.md)
+- [Data structures used for string matching and checking for existence in a hashmap](docs/miscellaneous/username-check-if-exist-or-not.md)
 - [ANSI escape codes](docs/miscellaneous/ANSI-escape-codes.md)
 - [_Compression_: Byte Pair Encoding](docs/miscellaneous/byte-pair-encoding.md)
 
 ## Operating Systems
 
-- [Never defrag an SSD](docs/operating-systems/defragging-an-SSD.md)
-- [Removing write protection from disk / USB drive](docs/operating-systems/removing-write-protection-from-disk.md)
 - [Installing a Linux Distro alongside Windows](docs/operating-systems/installing-a-Linux-Distro-alongside-Windows.md)
+- [Removing write protection from disk / USB drive](docs/operating-systems/removing-write-protection-from-disk.md)
+- [Never defrag an SSD](docs/operating-systems/defragging-an-SSD.md)
 
 ## Python
 
-- [_uv_: The new virtual environment](docs/python/uv.md)
-- [Find out last modified date of a file](docs/python/find-out-last-modified-date-of-a-file.md)
-- [Walrus operator](docs/python/walrus-operator.md)
 - [Important Modules To Learn About](docs/python/important-modules-to-learn-about.md)
+- [Find out last modified date of a file](docs/python/find-out-last-modified-date-of-a-file.md)
+- [_uv_: The new virtual environment](docs/python/uv.md)
+- [Walrus operator](docs/python/walrus-operator.md)
 
 ## Web Development
 
-- [Intro to CSS](docs/web-development/css.md)
-- [Basics of HTML](docs/web-development/html.md)
 - [What is web?](docs/web-development/web.md)
+- [Basics of HTML](docs/web-development/html.md)
+- [Intro to CSS](docs/web-development/css.md)
 
 ---
 
