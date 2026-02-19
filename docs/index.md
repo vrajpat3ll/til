@@ -2,13 +2,13 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_42 TILs_ and counting...
+_43 TILs_ and counting...
 
 ## Categories
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[10]</sup></td><td><a href="#bash">Bash</a><sup>[1]</sup></td><td><a href="#c++">C++</a><sup>[4]</sup></td></tr>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[11]</sup></td><td><a href="#bash">Bash</a><sup>[1]</sup></td><td><a href="#c++">C++</a><sup>[4]</sup></td></tr>
 <tr>
 <td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td><td><a href="#computer-networks">Computer Networks</a><sup>[4]</sup></td><td><a href="#docker">Docker</a><sup>[1]</sup></td></tr>
 <tr>
@@ -39,6 +39,7 @@ _42 TILs_ and counting...
 - [_Deep Learning_: Resources for learning](artificial-intelligence/deep-learning.md)
 - [_MCP Server_: What is it all about?](artificial-intelligence/mcp-server.md)
 - [_Deep Learning_: **CNNs**](artificial-intelligence/conv-neural-networks.md)
+- [_RAG_: What is it?](artificial-intelligence/rag.md)
 - [Data Pre-Processing](artificial-intelligence/data-pre_processing.md)
 - [_Reinforcement Learning_: The 3rd class of Learning Problems](artificial-intelligence/reinforcement-learning.md)
 - [Papers on the reading list](artificial-intelligence/papers-to-read.md)
