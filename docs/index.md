@@ -2,7 +2,7 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_39 TILs_ and counting...
+_42 TILs_ and counting...
 
 ## Categories
 
@@ -14,22 +14,22 @@ _39 TILs_ and counting...
 <tr>
 <td><a href="#git">Git</a><sup>[1]</sup></td><td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td><td><a href="#miscellaneous">Miscellaneous</a><sup>[4]</sup></td></tr>
 <tr>
-<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td></tr>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td><td><a href="#web-development">Web Development</a><sup>[3]</sup></td></tr>
 </tbody></table>
 
 ## Recent TILs 🆕
 
 <table align="center"><tbody>
 <tr>
+<td><a href="web-development/html.md">Basics of HTML</a></td></tr>
+<tr>
+<td><a href="web-development/web.md">What is web?</a></td></tr>
+<tr>
 <td><a href="python/uv.md">_uv_: The new virtual environment</a></td></tr>
 <tr>
 <td><a href="python/walrus-operator.md">Walrus operator</a></td></tr>
 <tr>
 <td><a href="python/important-modules-to-learn-about.md">Important Modules To Learn About</a></td></tr>
-<tr>
-<td><a href="operating-systems/removing-write-protection-from-disk.md">Removing write protection from disk / USB drive</a></td></tr>
-<tr>
-<td><a href="operating-systems/installing-a-Linux-Distro-alongside-Windows.md">Installing a Linux Distro alongside Windows</a></td></tr>
 </tbody></table>
 
 ## Artificial Intelligence
@@ -103,6 +103,12 @@ _39 TILs_ and counting...
 - [Find out last modified date of a file](python/find-out-last-modified-date-of-a-file.md)
 - [Walrus operator](python/walrus-operator.md)
 - [Important Modules To Learn About](python/important-modules-to-learn-about.md)
+
+## Web Development
+
+- [Intro to CSS](web-development/css.md)
+- [Basics of HTML](web-development/html.md)
+- [What is web?](web-development/web.md)
 
 ---
 

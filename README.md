@@ -2,7 +2,7 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_39 TILs_ and counting...
+_42 TILs_ and counting...
 
 ## Categories
 
@@ -14,7 +14,7 @@ _39 TILs_ and counting...
 <tr>
 <td><a href="#git">Git</a><sup>[1]</sup></td><td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td><td><a href="#miscellaneous">Miscellaneous</a><sup>[4]</sup></td></tr>
 <tr>
-<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td></tr>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td><td><a href="#web-development">Web Development</a><sup>[3]</sup></td></tr>
 </tbody></table>
 
 ## Artificial Intelligence
@@ -88,6 +88,12 @@ _39 TILs_ and counting...
 - [Find out last modified date of a file](docs/python/find-out-last-modified-date-of-a-file.md)
 - [Walrus operator](docs/python/walrus-operator.md)
 - [Important Modules To Learn About](docs/python/important-modules-to-learn-about.md)
+
+## Web Development
+
+- [Intro to CSS](docs/web-development/css.md)
+- [Basics of HTML](docs/web-development/html.md)
+- [What is web?](docs/web-development/web.md)
 
 ---
 
