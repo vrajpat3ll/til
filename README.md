@@ -8,24 +8,13 @@ _39 TILs_ and counting...
 
 <table align="center"><tbody>
 <tr>
-<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[10]</sup></td>
-<td><a href="#bash">Bash</a><sup>[1]</sup></td>
-<td><a href="#c++">C++</a><sup>[4]</sup></td>
-</tr>
+<td><a href="#artificial-intelligence">Artificial Intelligence</a><sup>[10]</sup></td><td><a href="#bash">Bash</a><sup>[1]</sup></td><td><a href="#c++">C++</a><sup>[4]</sup></td></tr>
 <tr>
-<td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td>
-<td><a href="#computer-networks">Computer Networks</a><sup>[4]</sup></td>
-<td><a href="#docker">Docker</a><sup>[1]</sup></td>
-</tr>
+<td><a href="#command-line-tools">Command Line Tools</a><sup>[6]</sup></td><td><a href="#computer-networks">Computer Networks</a><sup>[4]</sup></td><td><a href="#docker">Docker</a><sup>[1]</sup></td></tr>
 <tr>
-<td><a href="#git">Git</a><sup>[1]</sup></td>
-<td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td>
-<td><a href="#miscellaneous">Miscellaneous</a><sup>[4]</sup></td>
-</tr>
+<td><a href="#git">Git</a><sup>[1]</sup></td><td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td><td><a href="#miscellaneous">Miscellaneous</a><sup>[4]</sup></td></tr>
 <tr>
-<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td>
-<td><a href="#python">Python</a><sup>[4]</sup></td>
-</tr>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td></tr>
 </tbody></table>
 
 ## Artificial Intelligence
