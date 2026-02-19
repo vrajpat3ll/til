@@ -73,7 +73,7 @@ def format_link(path: Path, for_docs_site: bool) -> str:
     path_str = path.as_posix()
 
     if for_docs_site:
-        return path_str.removeprefix("docs/")  # remove docs/ prefix
+        return path_str.removeprefix("docs/").removesuffix('.md')  # remove docs/ prefix
     return path_str  # keep docs/ prefix
 
 
