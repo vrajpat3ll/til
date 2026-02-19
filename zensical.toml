@@ -311,5 +311,9 @@ toggle.name = "Switch to light mode"
 repo = "fontawesome/brands/github"
 
 [[project.extra.social]]
-icon = "fontawesome/brands/github"
-link = "https://leetcode.com/vrajpat3ll"
+icon = "fontawesome/brands/x-twitter"
+link = "https://x.com/vrajpat3ll"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://linkedin.com/vrajpat3ll"

@@ -1,5 +1,4 @@
 name: Documentation
-
 on:
   push:
     branches:
@@ -33,7 +32,7 @@ jobs:
         with:
           ref: main
       - name: "Set up Python"
-      - uses: actions/setup-python@v6
+        uses: actions/setup-python@v6
         with:
           python-version-file: "pyproject.toml"
 

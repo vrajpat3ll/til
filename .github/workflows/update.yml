@@ -1,5 +1,4 @@
 name: Auto Update README & Index
-
 on:
   push:
     branches: [main]
