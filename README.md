@@ -2,7 +2,7 @@
 
 > Welcome to my digital garden / second brain where I try to dump everything I learn in its most raw form 🌱
 
-_43 TILs_ and counting...
+_44 TILs_ and counting...
 
 ## Categories
 
@@ -14,22 +14,22 @@ _43 TILs_ and counting...
 <tr>
 <td><a href="#git">Git</a><sup>[1]</sup></td><td><a href="#kubernetes">Kubernetes</a><sup>[1]</sup></td><td><a href="#miscellaneous">Miscellaneous</a><sup>[4]</sup></td></tr>
 <tr>
-<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[4]</sup></td><td><a href="#web-development">Web Development</a><sup>[3]</sup></td></tr>
+<td><a href="#operating-systems">Operating Systems</a><sup>[3]</sup></td><td><a href="#python">Python</a><sup>[5]</sup></td><td><a href="#web-development">Web Development</a><sup>[3]</sup></td></tr>
 </tbody></table>
 
 ## Artificial Intelligence
 
-- [Data Pre-Processing](docs/artificial-intelligence/data-pre_processing.md)
-- [Feature Scaling Techniques](docs/artificial-intelligence/feature-scaling-techniques.md)
-- [_Reinforcement Learning_: The 3rd class of Learning Problems](docs/artificial-intelligence/reinforcement-learning.md)
-- [_MCP Server_: What is it all about?](docs/artificial-intelligence/mcp-server.md)
-- [_Deep Learning_: Resources for learning](docs/artificial-intelligence/deep-learning.md)
-- [_Deep Learning_: **CNNs**](docs/artificial-intelligence/conv-neural-networks.md)
-- [Papers on the reading list](docs/artificial-intelligence/papers-to-read.md)
-- [_Regularization_: A way to select features](docs/artificial-intelligence/feature-selection.md)
-- [_Datasets_ for practicing](docs/artificial-intelligence/useful-datasets-to-learn-ML.md)
 - [_Large Language Models_: Locally running one](docs/artificial-intelligence/locally-run-an-LLM.md)
+- [_Datasets_ for practicing](docs/artificial-intelligence/useful-datasets-to-learn-ML.md)
+- [_Reinforcement Learning_: The 3rd class of Learning Problems](docs/artificial-intelligence/reinforcement-learning.md)
+- [_Deep Learning_: Resources for learning](docs/artificial-intelligence/deep-learning.md)
+- [_Regularization_: A way to select features](docs/artificial-intelligence/feature-selection.md)
 - [_RAG_: What is it?](docs/artificial-intelligence/rag.md)
+- [Feature Scaling Techniques](docs/artificial-intelligence/feature-scaling-techniques.md)
+- [Papers on the reading list](docs/artificial-intelligence/papers-to-read.md)
+- [_Deep Learning_: **CNNs**](docs/artificial-intelligence/conv-neural-networks.md)
+- [_MCP Server_: What is it all about?](docs/artificial-intelligence/mcp-server.md)
+- [Data Pre-Processing](docs/artificial-intelligence/data-pre_processing.md)
 
 ## Bash
 
@@ -37,25 +37,25 @@ _43 TILs_ and counting...
 
 ## C++
 
-- [Shallow Copy vs Deep Copy](docs/c++/deep-vs-shallow-copy.md)
 - [std::copy and its design](docs/c++/copy-and-its-design.md)
-- [`malloc` vs `new`](docs/c++/malloc-new.md)
+- [Shallow Copy vs Deep Copy](docs/c++/deep-vs-shallow-copy.md)
 - [_lock_guard_: Locking mechanism](docs/c++/lock-guard.md)
+- [`malloc` vs `new`](docs/c++/malloc-new.md)
 
 ## Command Line Tools
 
-- [`bat`: `cat`, but with syntax highlighting!](docs/command-line-tools/bat.md)
-- [`yadm`: Yet Another Dot Manager](docs/command-line-tools/yadm.md)
-- [`zoxide`: `cd` on steroids](docs/command-line-tools/zoxide.md)
-- [`fzf`: A general-purpose command-line fuzzy finder](docs/command-line-tools/fzf.md)
 - [`jq`: JSON formatter for the terminal](docs/command-line-tools/jq.md)
+- [`fzf`: A general-purpose command-line fuzzy finder](docs/command-line-tools/fzf.md)
+- [`zoxide`: `cd` on steroids](docs/command-line-tools/zoxide.md)
+- [`bat`: `cat`, but with syntax highlighting!](docs/command-line-tools/bat.md)
 - [`fzf`: Previewing a file](docs/command-line-tools/fzf-previewing-a-file.md)
+- [`yadm`: Yet Another Dot Manager](docs/command-line-tools/yadm.md)
 
 ## Computer Networks
 
+- [Signals](docs/computer-networks/signal.md)
 - [Sniff packets on the network](docs/computer-networks/sniff-packets-on-the-network.md)
 - [_Sockets_: A guide](docs/computer-networks/sockets.md)
-- [Signals](docs/computer-networks/signal.md)
 - [_SSH_: Cool way to connect to another machine in a local network](docs/computer-networks/ssh.md)
 
 ## Docker
@@ -72,23 +72,24 @@ _43 TILs_ and counting...
 
 ## Miscellaneous
 
-- [Formatting Syntax for Github Markdown](docs/miscellaneous/formatting-syntax.md)
-- [Data structures used for string matching and checking for existence in a hashmap](docs/miscellaneous/username-check-if-exist-or-not.md)
-- [ANSI escape codes](docs/miscellaneous/ANSI-escape-codes.md)
 - [_Compression_: Byte Pair Encoding](docs/miscellaneous/byte-pair-encoding.md)
+- [Formatting Syntax for Github Markdown](docs/miscellaneous/formatting-syntax.md)
+- [ANSI escape codes](docs/miscellaneous/ANSI-escape-codes.md)
+- [Data structures used for string matching and checking for existence in a hashmap](docs/miscellaneous/username-check-if-exist-or-not.md)
 
 ## Operating Systems
 
+- [Never defrag an SSD](docs/operating-systems/defragging-an-SSD.md)
 - [Installing a Linux Distro alongside Windows](docs/operating-systems/installing-a-Linux-Distro-alongside-Windows.md)
 - [Removing write protection from disk / USB drive](docs/operating-systems/removing-write-protection-from-disk.md)
-- [Never defrag an SSD](docs/operating-systems/defragging-an-SSD.md)
 
 ## Python
 
-- [Important Modules To Learn About](docs/python/important-modules-to-learn-about.md)
-- [Find out last modified date of a file](docs/python/find-out-last-modified-date-of-a-file.md)
 - [_uv_: The new virtual environment](docs/python/uv.md)
+- [Method Resolution Order (MRO)](docs/python/method-resolution-order.md)
 - [Walrus operator](docs/python/walrus-operator.md)
+- [Find out last modified date of a file](docs/python/find-out-last-modified-date-of-a-file.md)
+- [Important Modules To Learn About](docs/python/important-modules-to-learn-about.md)
 
 ## Web Development
 
